@@ -46,7 +46,7 @@
                           'csrf_xname': 'X-CSRFToken',
                           'folder': '{{ query.dir|escapejs }}', },
 
-                allowedExtensions: {% get_file_extensions request.GET %},
+                allowedExtensions: ['.jpg', '.jpeg', '.gif', '.png', '.tif', '.tiff', '.pdf','.doc','.rtf','.txt','.xls','.csv', '.ase', '.mov','.wmv','.mpeg','.mpg','.avi','.rm', '.mp3','.mp4','.wav','.aiff','.midi','.m4p'],
                 sizeLimit: {{ settings_var.MAX_UPLOAD_SIZE|unlocalize }},
                 minSizeLimit: 0,
                 debug: false,
